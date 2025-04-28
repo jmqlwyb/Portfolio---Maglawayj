@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+</head>
+<body>
+  <aside id="sidebar">
+    <h2>👤 Profile</h2>
+    <nav>
+      <a href="profile.html">Basic Info</a>
+      <a href="fun-facts.html">Fun Facts</a>
+      <a href="contact.html">Contact</a>
+      <a href="github.html">GitHub</a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <button id="burger">&#9776;</button>
+    <h1>Contact</h1>
+  </header>
+
+  <main class="main-content">
+    <section>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <input type="text" id="datepicker" placeholder="Preferred Date" />
+        <button type="submit">Send</button>
+      </form>
+      <div id="success-message" style="display:none;">Message sent successfully!</div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
