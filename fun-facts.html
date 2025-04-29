@@ -8,7 +8,7 @@
 </head>
 <body>
   <aside id="sidebar">
-    <h2>👤 Profile</h2>
+    <h2>Personal Dashboard</h2>
     <nav>
       <a href="profile.html">Basic Info</a>
       <a href="fun-facts.html">Fun Facts</a>
@@ -25,13 +25,44 @@
   <main class="main-content">
     <section>
       <button id="toggle-facts">Show Fun Facts</button>
-      <ul id="facts-list" style="display:none;">
-        <li>I’ve visited 15 countries.</li>
+      <ul id="facts-list" style="display:none;">  
         <li>I can solve a Rubik’s Cube under a minute.</li>
+        <li>I built my first website when I was 14 years old.</li>
+        <li>I love hiking and once climbed a volcano!</li>
+        <li>Chess is my favorite strategy game.</li>
+        <li>I'm a coffee enthusiast — I love trying different brews.</li>
+        <li>Photography is one of my biggest passions.</li>
+        <li>I enjoy learning new languages — currently learning Spanish!</li>
       </ul>
     </section>
   </main>
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#toggle-facts').click(function() {
+        $('#facts-list').slideToggle(500);
+
+        // Change button text
+        if ($(this).text() === 'Show Fun Facts') {
+          $(this).text('Hide Fun Facts');
+        } else {
+          $(this).text('Show Fun Facts');
+        }
+
+        // Randomize fun facts order
+        var ul = $('#facts-list');
+        var liArr = ul.children('li');
+        liArr.sort(function() {
+          return 0.5 - Math.random();
+        });
+        ul.empty();
+        ul.append(liArr);
+      });
+    });
+  </script>
+
 </body>
 </html>

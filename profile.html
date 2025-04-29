@@ -3,13 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Basic Info</title>
+  <title>Profile</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+   
+    body {
+      display: flex;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #sidebar {
+      width: 220px;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    #basic-info {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .profile-container {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    .about-text {
+      margin-top: 20px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
 
   <aside id="sidebar">
-    <h2>👤 Profile</h2>
+    <h2>Personal Dashboard</h2>   
     <nav>
       <a href="profile.html">Profile</a>
       <a href="fun-facts.html">Fun Facts</a>
@@ -19,9 +70,8 @@
   </aside>
   
   <main id="basic-info">
-        
     <div class="profile-container">
-      <img src="pic.jpg" alt="Profile Picture" class="profile-pic">
+      <img src="images/pic.jpg" alt="Profile Picture" class="profile-pic">
       <h1>Benito Maglaway</h1>
       <p><strong>Hobbies:</strong> Coding, Photography, Traveling, Chess</p>
       <p><strong>Favorite Quote:</strong> 
